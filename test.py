@@ -34,7 +34,7 @@ def mp3_to_wav(source, skip=0, excerpt=False):
 
     if excerpt:
         # 30 seconds - Does not work anymore when using skip
-        excrept = sound[skip*500:skip*500+1000]
+        excrept = sound[skip*500:skip*2000+20000]
         output_path = os.path.splitext(source)[0]+"_excerpt.wav"
         excrept.export(output_path, format="wav")
     else:
